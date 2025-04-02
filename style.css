@@ -1,0 +1,123 @@
+/* Estilo general del cuerpo */
+body {
+    margin: 0;
+    font-family: "Comfortaa", sans-serif;
+    text-align: center;
+    font-size: 18px; /* Aumentamos el tamaño de la fuente */
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('./img/banner-2.jpg') no-repeat center center/cover;
+    color: black;
+    width: 100%;
+    height: 730px;
+    margin: 0px;
+}
+
+.titulo h1 {
+    font-size: 75px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.container {
+    display: flex;
+    width: 100%; /* Aseguramos que el contenedor ocupe todo el ancho */
+    height: 100vh; /* Aseguramos que ocupe toda la altura de la pantalla */
+    margin: 0; /* Eliminamos márgenes */
+    align-items: center;
+    padding: 0; /* Eliminamos el relleno */
+}
+
+.text-content {
+    flex: 1;
+    text-align: left; /* Alineamos el texto a la izquierda */
+    padding: 20px; /* Agregamos un poco de espacio interno */
+    margin: 0; /* Eliminamos márgenes */
+}
+
+.text-content h1 {
+    font-size: 50px; /* Aumentamos el tamaño del segundo h1 */
+    margin: 0 0 10px 0; /* Solo margen inferior */
+}
+
+.text-content p {
+    font-size: 35px; /* Aumentamos el tamaño del texto en p */
+    color: #555;
+    margin: 0; /* Eliminamos márgenes */
+    text-align: left; /* Alineamos el texto a la izquierda */
+}
+
+.image-content {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0; /* Eliminamos márgenes */
+}
+
+.main-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0; /* Eliminamos bordes redondeados si no son necesarios */
+    margin: 0; /* Aseguramos que no tenga márgenes */
+}
+.illustration {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.illustration img {
+    width: 50px;
+}
+
+.illustration span {
+    font-weight: bold;
+    font-size: 1.2em;
+    font-family: cursive;
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        max-width: 90%;
+        padding: 10px;
+    }
+
+    .text-content h1 {
+        font-size: 1.5em;
+    }
+
+    .text-content p {
+        font-size: 1em;
+    }
+
+    .image-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .illustration {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-top: 10px;
+    }
+}
