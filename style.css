@@ -98,10 +98,10 @@ body {
 
 /* Contenedor secundario */
 .container2 {
-    width: 100%; /* Ocupa el 90% del ancho de la pantalla */
-    margin: 0; /* Eliminamos márgenes */
+    width: 100%;
+    margin: 0; 
     padding: 20px;
-    background-color: rgb(0, 255, 174); /* Fondo azul */
+    background-color: rgb(0, 255, 174); 
 }
 
 h1 {
@@ -112,24 +112,24 @@ h1 {
 
 /* Programas */
 .programs {
-    display: grid; /* Usamos grid para un diseño flexible */
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas grandes */
-    gap: 20px; /* Espaciado entre las imágenes */
-    justify-content: center; /* Centramos el contenido */
-    max-width: 100%; /* Aseguramos que ocupe todo el ancho */
-    margin: auto; /* Centramos el contenedor */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center; 
+    max-width: 100%;
+    margin: auto;
 }
 
 .program {
     text-align: center;
-    width: 100%; /* Cada programa ocupa el ancho de su celda */
+    width: 100%;
 }
 
 .program img {
-    width: 60%; /* La imagen ocupa todo el ancho del contenedor */
-    height: auto; /* Mantiene la proporción */
-    border-radius: 0; /* Eliminamos los bordes redondeados */
-    border: 2px solid black; /* Borde negro */
+    width: 60%;
+    height: auto;
+    border-radius: 0;
+    border: 2px solid black;
 }
 
 .program p {
@@ -163,38 +163,38 @@ h1 {
 
 .contenedor4 {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas por defecto en pantallas grandes */
-    gap: 0; /* Eliminamos el espaciado entre las imágenes */
-    padding: 0; /* Eliminamos el relleno del contenedor */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    padding: 0; 
     justify-content: center;
     width: 100%;
 }
 
 .contenedor4 img {
-    max-width: 100%; /* La imagen ocupa todo el ancho de su celda */
-    height: auto; /* Mantiene la proporción */
-    object-fit: cover; /* Asegura que la imagen se ajuste dentro del contenedor */
-    border: none; /* Eliminamos los bordes */
-    margin: 0; /* Eliminamos los márgenes */
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: none;
+    margin: 0;
 }
 
 .bloque-azul {
-    background-color: #007BFF; /* Color azul */
-    color: black; /* Texto en blanco */
-    text-align: center; /* Centrar el texto */
-    padding: 20px; /* Espaciado interno */
-    margin-top: 20px; /* Espaciado superior */
-    font-size: 1.5em; /* Tamaño del texto */
-    font-weight: bold; /* Texto en negrita */
-    border-radius: 8px; /* Bordes ligeramente redondeados */
-    width: 100%; /* Ancho completo */
+    background-color: #007BFF;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 8px;
+    width: 100%;
 }
 
 .footer {
-    background-color: #000000; /* Fondo negro */
-    color: white; /* Texto blanco */
-    padding: 10px 0; /* Espaciado interno */
-    text-align: center; /* Centrar el texto */
+    background-color: #000000; 
+    color: white;
+    padding: 10px 0;
+    text-align: center;
 }
 
 .footer-container {
@@ -204,7 +204,7 @@ h1 {
     max-width: 1200px;
     margin: auto;
     padding: 10px;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas */
+    flex-wrap: wrap;
 }
 
 .footer-text {
@@ -218,7 +218,7 @@ h1 {
     display: flex;
     flex: 2;
     justify-content: space-around;
-    flex-wrap: wrap; /* Permite que los enlaces se ajusten en varias filas */
+    flex-wrap: wrap;
     margin: 10px 0;
 }
 
@@ -243,14 +243,13 @@ h1 {
 }
 
 .footer-column a:hover {
-    text-decoration: underline; /* Subrayado al pasar el cursor */
+    text-decoration: underline;
 }
 
 /* Media Query para pantallas pequeñas */
 @media (max-width: 600px) {
-    /* Contenedor principal */
     .container {
-        flex-direction: column; /* Cambiamos a diseño vertical */
+        flex-direction: column;
         text-align: center;
         width: 100%;
         padding: 10px;
@@ -262,11 +261,11 @@ h1 {
     }
 
     .text-content h1 {
-        font-size: 1.8em; /* Ajustamos el tamaño del h1 */
+        font-size: 1.8em;
     }
 
     .text-content p {
-        font-size: 1.2em; /* Ajustamos el tamaño del párrafo */
+        font-size: 1.2em;
     }
 
     .image-content {
@@ -279,19 +278,18 @@ h1 {
         height: auto;
     }
 
-    /* Programas */
     .programs {
-        grid-template-columns: repeat(2, 1fr); /* Cambiamos a 2 columnas */
-        gap: 20px; /* Espaciado entre las imágenes */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
     .program {
-        width: 100%; /* Cada programa ocupa el ancho de su celda */
+        width: 100%;
     }
 
     .program img {
-        max-width: 60%; /* Aseguramos que las imágenes no excedan el ancho */
-        height: auto; /* Mantiene la proporción */
+        max-width: 60%;
+        height: auto;
     }
 
     .illustration {
@@ -318,45 +316,45 @@ h1 {
     }
 
     .imagen img {
-        width: 100%; /* Las imágenes ocupan todo el ancho de su contenedor */
-        height: auto; /* Mantiene la proporción */
+        width: 100%;
+        height: auto;
         border-radius: 8px;
     }
 
     .contenedor4 {
-        grid-template-columns: repeat(2, 1fr); /* Cambiamos a 2 columnas en pantallas pequeñas */
-        gap: 0; /* Eliminamos el espaciado entre las imágenes */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
     }
 
     .contenedor4 img {
-        max-width: 100%; /* Aseguramos que las imágenes no excedan el ancho */
-        height: auto; /* Mantiene la proporción */
-        border: none; /* Eliminamos los bordes */
-        margin: 0; /* Eliminamos los márgenes */
+        max-width: 100%;
+        height: auto;
+        border: none;
+        margin: 0;
     }
 
     .footer-container {
-        flex-direction: column; /* Cambiamos a diseño vertical */
-        align-items: center; /* Centramos los elementos */
+        flex-direction: column;
+        align-items: center;
     }
 
     .footer-text {
-        order: 1; /* Aseguramos que el texto del footer esté primero */
+        order: 1;
         margin-bottom: 10px;
     }
 
     .footer-links {
-        display: grid; /* Usamos grid para un diseño flexible */
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-        gap: 10px; /* Espaciado entre los elementos */
-        justify-content: center; /* Centramos el contenido */
-        align-items: center; /* Centramos verticalmente */
-        width: 100%; /* Ocupa todo el ancho */
-        order: 2; /* Aseguramos que los enlaces estén después del texto */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        order: 2;
     }
 
     .footer-column {
         text-align: center;
-        margin: 10px 0; /* Espaciado entre columnas */
+        margin: 10px 0;
     }
 }
