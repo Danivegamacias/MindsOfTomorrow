@@ -15,9 +15,9 @@ body {
     text-align: center;
     background: url('./img/banner-2.jpg') no-repeat center center/cover;
     color: black;
-    width: 100%;
+    width: 101%;
     height: 730px;
-    margin: 0;
+    margin: auto;
 }
 
 .titulo h1 {
