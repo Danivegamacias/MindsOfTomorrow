@@ -190,6 +190,62 @@ h1 {
     width: 100%; /* Ancho completo */
 }
 
+.footer {
+    background-color: #000000; /* Fondo negro */
+    color: white; /* Texto blanco */
+    padding: 10px 0; /* Espaciado interno */
+    text-align: center; /* Centrar el texto */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas */
+}
+
+.footer-text {
+    flex: 1;
+    text-align: center;
+    color: rgb(255, 251, 251);
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    display: flex;
+    flex: 2;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Permite que los enlaces se ajusten en varias filas */
+    margin: 10px 0;
+}
+
+.footer-column {
+    text-align: center;
+    flex: 1;
+    margin: 5px 0;
+}
+
+.footer-column h4 {
+    margin: 0;
+    font-size: 16px;
+    color: white;
+}
+
+.footer-column a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 14px;
+    margin: 3px 0;
+}
+
+.footer-column a:hover {
+    text-decoration: underline; /* Subrayado al pasar el cursor */
+}
+
 /* Media Query para pantallas pequeñas */
 @media (max-width: 600px) {
     /* Contenedor principal */
@@ -277,5 +333,30 @@ h1 {
         height: auto; /* Mantiene la proporción */
         border: none; /* Eliminamos los bordes */
         margin: 0; /* Eliminamos los márgenes */
+    }
+
+    .footer-container {
+        flex-direction: column; /* Cambiamos a diseño vertical */
+        align-items: center; /* Centramos los elementos */
+    }
+
+    .footer-text {
+        order: 1; /* Aseguramos que el texto del footer esté primero */
+        margin-bottom: 10px;
+    }
+
+    .footer-links {
+        display: grid; /* Usamos grid para un diseño flexible */
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+        gap: 10px; /* Espaciado entre los elementos */
+        justify-content: center; /* Centramos el contenido */
+        align-items: center; /* Centramos verticalmente */
+        width: 100%; /* Ocupa todo el ancho */
+        order: 2; /* Aseguramos que los enlaces estén después del texto */
+    }
+
+    .footer-column {
+        text-align: center;
+        margin: 10px 0; /* Espaciado entre columnas */
     }
 }
