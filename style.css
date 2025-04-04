@@ -98,34 +98,38 @@ body {
 
 /* Contenedor secundario */
 .container2 {
-    max-width: 1000px;
-    margin: auto;
+    width: 100%; /* Ocupa el 90% del ancho de la pantalla */
+    margin: 0; /* Eliminamos márgenes */
     padding: 20px;
+    background-color: rgb(0, 255, 174); /* Fondo azul */
 }
 
 h1 {
     font-size: 2em;
     margin-bottom: 20px;
+    
 }
 
 /* Programas */
 .programs {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    display: grid; /* Usamos grid para un diseño flexible */
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas grandes */
+    gap: 20px; /* Espaciado entre las imágenes */
+    justify-content: center; /* Centramos el contenido */
+    max-width: 100%; /* Aseguramos que ocupe todo el ancho */
+    margin: auto; /* Centramos el contenedor */
 }
 
 .program {
     text-align: center;
-    width: 200px;
+    width: 100%; /* Cada programa ocupa el ancho de su celda */
 }
 
 .program img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    border: 2px solid black;
+    width: 60%; /* La imagen ocupa todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 0; /* Eliminamos los bordes redondeados */
+    border: 2px solid black; /* Borde negro */
 }
 
 .program p {
@@ -134,10 +138,63 @@ h1 {
     margin-top: 10px;
 }
 
+.container3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 50px;
+}
+
+.image-gallery {
+    position: relative;
+    max-width: 50%;
+}
+
+.image-gallery img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.text-content {
+    max-width: 50%;
+    padding-left: 20px;
+}
+
+.contenedor4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas por defecto en pantallas grandes */
+    gap: 0; /* Eliminamos el espaciado entre las imágenes */
+    padding: 0; /* Eliminamos el relleno del contenedor */
+    justify-content: center;
+    width: 100%;
+}
+
+.contenedor4 img {
+    max-width: 100%; /* La imagen ocupa todo el ancho de su celda */
+    height: auto; /* Mantiene la proporción */
+    object-fit: cover; /* Asegura que la imagen se ajuste dentro del contenedor */
+    border: none; /* Eliminamos los bordes */
+    margin: 0; /* Eliminamos los márgenes */
+}
+
+.bloque-azul {
+    background-color: #007BFF; /* Color azul */
+    color: black; /* Texto en blanco */
+    text-align: center; /* Centrar el texto */
+    padding: 20px; /* Espaciado interno */
+    margin-top: 20px; /* Espaciado superior */
+    font-size: 1.5em; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    width: 100%; /* Ancho completo */
+}
+
 /* Media Query para pantallas pequeñas */
 @media (max-width: 600px) {
+    /* Contenedor principal */
     .container {
-        flex-direction: column;
+        flex-direction: column; /* Cambiamos a diseño vertical */
         text-align: center;
         width: 100%;
         padding: 10px;
@@ -149,11 +206,11 @@ h1 {
     }
 
     .text-content h1 {
-        font-size: 1.8em;
+        font-size: 1.8em; /* Ajustamos el tamaño del h1 */
     }
 
     .text-content p {
-        font-size: 1.2em;
+        font-size: 1.2em; /* Ajustamos el tamaño del párrafo */
     }
 
     .image-content {
@@ -166,21 +223,19 @@ h1 {
         height: auto;
     }
 
+    /* Programas */
     .programs {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        max-width: 100%;
-        margin: auto;
+        grid-template-columns: repeat(2, 1fr); /* Cambiamos a 2 columnas */
+        gap: 20px; /* Espaciado entre las imágenes */
     }
 
     .program {
-        width: 100%;
+        width: 100%; /* Cada programa ocupa el ancho de su celda */
     }
 
     .program img {
-        max-width: 100%;
-        height: auto;
+        max-width: 60%; /* Aseguramos que las imágenes no excedan el ancho */
+        height: auto; /* Mantiene la proporción */
     }
 
     .illustration {
@@ -189,5 +244,38 @@ h1 {
         left: 0;
         margin-top: 10px;
     }
-}
 
+    .container3 {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .image-gallery {
+        max-width: 100%;
+        align-items: center;
+    }
+
+    .text-content {
+        max-width: 100%;
+        padding-left: 0;
+    }
+
+    .imagen img {
+        width: 100%; /* Las imágenes ocupan todo el ancho de su contenedor */
+        height: auto; /* Mantiene la proporción */
+        border-radius: 8px;
+    }
+
+    .contenedor4 {
+        grid-template-columns: repeat(2, 1fr); /* Cambiamos a 2 columnas en pantallas pequeñas */
+        gap: 0; /* Eliminamos el espaciado entre las imágenes */
+    }
+
+    .contenedor4 img {
+        max-width: 100%; /* Aseguramos que las imágenes no excedan el ancho */
+        height: auto; /* Mantiene la proporción */
+        border: none; /* Eliminamos los bordes */
+        margin: 0; /* Eliminamos los márgenes */
+    }
+}
