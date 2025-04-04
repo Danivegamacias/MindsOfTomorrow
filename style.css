@@ -3,9 +3,10 @@ body {
     margin: 0;
     font-family: "Comfortaa", sans-serif;
     text-align: center;
-    font-size: 18px; /* Aumentamos el tamaño de la fuente */
+    font-size: 18px;
 }
 
+/* Encabezado con imagen de fondo */
 .titulo {
     display: flex;
     flex-direction: column;
@@ -16,43 +17,45 @@ body {
     color: black;
     width: 100%;
     height: 730px;
-    margin: 0px;
+    margin: 0;
 }
 
 .titulo h1 {
     font-size: 75px;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin: 0 200px;
 }
 
+/* Contenedor principal */
 .container {
     display: flex;
-    width: 100%; /* Aseguramos que el contenedor ocupe todo el ancho */
-    height: 100vh; /* Aseguramos que ocupe toda la altura de la pantalla */
-    margin: 0; /* Eliminamos márgenes */
+    width: 100%;
+    height: 100vh;
+    margin: 0;
     align-items: center;
-    padding: 0; /* Eliminamos el relleno */
+    padding: 0;
 }
 
+/* Contenido de texto */
 .text-content {
     flex: 1;
-    text-align: left; /* Alineamos el texto a la izquierda */
-    padding: 20px; /* Agregamos un poco de espacio interno */
-    margin: 0; /* Eliminamos márgenes */
+    text-align: left;
+    padding: 20px;
+    margin: 0;
 }
 
 .text-content h1 {
-    font-size: 50px; /* Aumentamos el tamaño del segundo h1 */
-    margin: 0 0 10px 0; /* Solo margen inferior */
+    font-size: 50px;
+    margin: 0 0 10px 0;
 }
 
 .text-content p {
-    font-size: 35px; /* Aumentamos el tamaño del texto en p */
+    font-size: 35px;
     color: #555;
-    margin: 0; /* Eliminamos márgenes */
-    text-align: left; /* Alineamos el texto a la izquierda */
+    margin: 0;
+    text-align: left;
 }
 
+/* Contenido de imagen */
 .image-content {
     flex: 1;
     position: relative;
@@ -60,15 +63,17 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0; /* Eliminamos márgenes */
+    margin: 0;
 }
 
 .main-image {
     max-width: 100%;
     height: auto;
-    border-radius: 0; /* Eliminamos bordes redondeados si no son necesarios */
-    margin: 0; /* Aseguramos que no tenga márgenes */
+    border-radius: 0;
+    margin: 0;
 }
+
+/* Ilustración */
 .illustration {
     position: absolute;
     top: -30px;
@@ -91,27 +96,91 @@ body {
     font-family: cursive;
 }
 
+/* Contenedor secundario */
+.container2 {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Programas */
+.programs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.program {
+    text-align: center;
+    width: 200px;
+}
+
+.program img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.program p {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Media Query para pantallas pequeñas */
 @media (max-width: 600px) {
     .container {
         flex-direction: column;
         text-align: center;
-        max-width: 90%;
+        width: 100%;
         padding: 10px;
     }
 
+    .text-content {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
     .text-content h1 {
-        font-size: 1.5em;
+        font-size: 1.8em;
     }
 
     .text-content p {
-        font-size: 1em;
+        font-size: 1.2em;
     }
 
     .image-content {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .main-image {
+        max-width: 90%;
+        height: auto;
+    }
+
+    .programs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .program {
+        width: 100%;
+    }
+
+    .program img {
+        max-width: 100%;
+        height: auto;
     }
 
     .illustration {
@@ -121,3 +190,4 @@ body {
         margin-top: 10px;
     }
 }
+
